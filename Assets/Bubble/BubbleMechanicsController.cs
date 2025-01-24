@@ -1,16 +1,36 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class BubbleMechanicsController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+    [SerializeField] public float PelletSpawnSpeed = 1f;
+    [SerializeField] public GameObject PelletPrefab;
+
+    private GameObject pelletContainer;
+    private float lastPelletSpawnTime = 0f;
+
+    void Start() {
+        pelletContainer = GameObject.Find("/PelletContainer");
+        Assert.NotNull(pelletContainer);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void FixedUpdate() {
+        SpawnPellets();
+    }
+
+    void SpawnPellets() {
+        var now = Time.time;
+        if (now - lastPelletSpawnTime > (1 / PelletSpawnSpeed)) {
+            lastPelletSpawnTime = now;
+
+            var radius = transform.lossyScale.x * 0.5f;
+            var spawnPosition = transform.position + radius * (Vector3)Random.insideUnitCircle;
+            Instantiate(
+                PelletPrefab,
+                spawnPosition,
+                Quaternion.identity,
+                pelletContainer.transform
+            );
+        }
     }
 }
