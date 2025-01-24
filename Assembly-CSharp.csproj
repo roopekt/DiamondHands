@@ -66,8 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Pellet/PelletCrowdingDestroyer.cs" />
+    <Compile Include="Assets/Utils/EntityManager.cs" />
+    <Compile Include="Assets/Utils/ObjectPool.cs" />
+    <Compile Include="Assets/Utils/ComponentHolder.cs" />
+    <Compile Include="Assets/Utils/GameManager.cs" />
     <Compile Include="Assets/Bubble/MovementController.cs" />
     <Compile Include="Assets/Bubble/BubbleMechanicsController.cs" />
+    <Compile Include="Assets/Utils/EntityBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
