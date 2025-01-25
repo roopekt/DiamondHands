@@ -65,13 +65,13 @@
     <Analyzer Include="/home/roope/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Pellet/Pellet.cs" />
     <Compile Include="Assets/Utils/EntityManager.cs" />
     <Compile Include="Assets/Utils/ObjectPool.cs" />
     <Compile Include="Assets/Utils/ComponentHolder.cs" />
     <Compile Include="Assets/Utils/GameManager.cs" />
-    <Compile Include="Assets/Bubble/MovementController.cs" />
-    <Compile Include="Assets/Bubble/BubbleMechanicsController.cs" />
+    <Compile Include="Assets/CompanyGame/Bubble/MovementController.cs" />
+    <Compile Include="Assets/CompanyGame/Pellet/Pellet.cs" />
+    <Compile Include="Assets/CompanyGame/Bubble/BubbleMechanicsController.cs" />
     <Compile Include="Assets/Utils/EntityBase.cs" />
   </ItemGroup>
   <ItemGroup>
