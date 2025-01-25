@@ -17,6 +17,8 @@ public class StockGraph : MonoBehaviour
 
     public GameObject buyPrefab;
     public GameObject sellPrefab;
+    public Camera camera;
+    public float lineWidth = 3;
 
     private void Start()
     {
@@ -89,5 +91,13 @@ public class StockGraph : MonoBehaviour
         DrawLineBetweenPoints(linePoints[linePoints.Count - 1], next);
         linePoints.Add(next);
         goto drawLine;
+    }
+
+    void Update() {
+        var worldSpaceWidth = lineWidth * camera.orthographicSize / camera.pixelHeight;
+        foreach (var segment in lineSegments) {
+            segment.startWidth = worldSpaceWidth;
+            segment.endWidth = worldSpaceWidth;
+        }
     }
 }
