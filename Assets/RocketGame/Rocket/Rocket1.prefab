@@ -215,6 +215,30 @@ MonoBehaviour:
   hypeCost: 1
   heightText: {fileID: 571009330681035516}
   velocity: 0
+  HypeTweets:
+  - 'CryptoKing42: WEN LAMBO'
+  - 'DiamondHands420: Diamond hands only TO THE MOON '
+  - "StonksBro69: JUST BOUGHT MORE, LET\u2019S GO "
+  - 'HODLMasterFlex: 10x incoming, trust me bro '
+  - "WAGMI123: We\u2019re all gonna make it. WAGMI "
+  - 'RiskyTrader88: If you sell now, your wife will leave you '
+  - 'PaperHandsHater: HODL OR CRY LATER '
+  - 'MoonHunter77: This is the next DOGE, easy gains '
+  - "CryptoGranny: My grandma just mortgaged her house for this. LET\u2019S GO "
+  - 'BearDestroyer9000: Shorts are about to get REKT '
+  HateTweets:
+  - "CryptoKing42: IT\u2019S OVER. EVERYTHING IS RED. "
+  - 'DiamondHands420: I should have sold at the top. '
+  - 'StonksBro69: BRO, I JUST LOST EVERYTHING. '
+  - "HODLMasterFlex: This can\u2019t be happening. "
+  - "WAGMI123: We\u2019re NOT gonna make it. "
+  - 'RiskyTrader88: Is it too late to sell? '
+  - "PaperHandsHater: My hands aren\u2019t even paper; they\u2019re dust now. "
+  - 'MoonHunter77: WHERE IS THE BOTTOM? '
+  - "CryptoGranny: My grandma told me to sell, and I didn\u2019t listen. "
+  - 'BearDestroyer9000: Bears are feasting on my portfolio right now. '
+  TweetText: {fileID: 0}
+  TweetHandle: {fileID: 0}
   constantXSpeed: 1
   randomEventChance: 0.333
   randomEventInterfal: 1

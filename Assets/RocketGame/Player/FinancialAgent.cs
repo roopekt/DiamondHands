@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,32 @@ public class FinancialAgent : MonoBehaviour
     public float insightDuration = 3;
     public float insightCooldown = 30;
     float lastInsightUse = 0;
+
+    private float initlastSold = 0;
+    private float initlastBought = 0;
+
+    private float initinsightPower = .5f;
+    private float initinsightDuration = 3;
+    private float initinsightCooldown = 30;
+    private float initlastInsightUse = 0;
+
+    private float initCash;
+    
+
+    private void Start()
+    {
+        //Save Variables
+        initlastSold = lastSold;
+        initlastBought = lastBought;
+
+        initinsightPower = insightPower;
+        initinsightDuration = insightDuration;
+        initinsightCooldown = insightCooldown;
+        initlastInsightUse = lastInsightUse;
+        
+        initCash = cash;
+    }
+
     void Update()
     {
         KeyboardInput();
@@ -85,5 +112,17 @@ public class FinancialAgent : MonoBehaviour
 
     Rocket GetRocket() {
         return transform.GetComponentInChildren<Rocket>();
+    }
+
+    public void Reset()
+    {
+        lastSold = initlastSold;
+        lastBought = initlastBought;
+        insightPower = initinsightPower;
+        insightDuration = initinsightDuration;
+        insightCooldown = initinsightCooldown;
+        lastInsightUse = initlastInsightUse;
+        
+        cash = initCash;
     }
 }
