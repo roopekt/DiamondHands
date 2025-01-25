@@ -21,14 +21,14 @@ public class Rocket : MonoBehaviour
         else
         {
             float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? playerBoostInfluence : 0);
-            velocity = (Random.Range(-1f, 1f) + adjust) * InfluenceVel();
+            velocity = (Random.Range(-8f, 1f) + adjust) * InfluenceVel();
         if (HasRandomEvent(StockEvent.chaos))
             velocity *= Random.value * 2;
         }
     }
     float InfluenceVel()
     {
-        float final = 3f * Mathf.Sign(influence) + influence;
+        float final = .5f * Mathf.Sign(influence) + influence;
         return final ;
     }
 
