@@ -561,6 +561,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
+      propertyPath: targets.Array.data[0].transform
+      value: 
+      objectReference: {fileID: 1898309339}
+    - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
+      propertyPath: targets.Array.data[1].transform
+      value: 
+      objectReference: {fileID: 333435665}
     - target: {fileID: 6797263616967737612, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -652,6 +660,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5852608557522447679, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: rocket
+      value: 
+      objectReference: {fileID: 9067366614725243794}
+    - target: {fileID: 6037764886478321357, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: playerRocket
       value: 
       objectReference: {fileID: 9067366614725243794}
     - target: {fileID: 6199075988686252913, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
@@ -787,6 +799,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1923244712674496856, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923244712674496856, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923244712674496856, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923244712674496856, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923244712674496856, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3664668239816971531, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: rocketParent
+      value: 
+      objectReference: {fileID: 9067366614725243794}
+    - target: {fileID: 3664668239816971531, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: maximumVelocity
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 4931122393549862171, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -795,7 +835,8 @@ PrefabInstance:
       propertyPath: transactionShareCountSilder
       value: 
       objectReference: {fileID: 1341449715}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2306305481272071235, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

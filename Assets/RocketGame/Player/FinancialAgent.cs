@@ -57,6 +57,6 @@ public class FinancialAgent : MonoBehaviour
     }
 
     Rocket GetRocket() {
-        return transform.GetChild(0).GetComponent<Rocket>();
+        return transform.GetComponentInChildren<Rocket>();
     }
 }
