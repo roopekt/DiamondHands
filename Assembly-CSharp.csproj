@@ -71,6 +71,7 @@
     <Compile Include="Assets/Utils/GameManager.cs" />
     <Compile Include="Assets/CompanyGame/Bubble/MovementController.cs" />
     <Compile Include="Assets/RocketGame/Rocket.cs" />
+    <Compile Include="Assets/Fish/FishCon.cs" />
     <Compile Include="Assets/RocketGame/CashText.cs" />
     <Compile Include="Assets/CompanyGame/Pellet/Pellet.cs" />
     <Compile Include="Assets/RocketGame/FinancialAgent.cs" />

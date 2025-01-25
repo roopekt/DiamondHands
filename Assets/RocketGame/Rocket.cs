@@ -6,7 +6,8 @@ public class Rocket : MonoBehaviour
     [SerializeField] public float shareValue = 1f;
     [SerializeField] public int sharesOwned = 0;
     [SerializeField] public float gravity = 1f;
-    [SerializeField] public float velocityGainPerShare = 1f;
+    [SerializeField] public float hypeCost = 1f;
+    [SerializeField] public float hypeVelocityGain = 1f;
 
     private float velocity = 0f;
     private bool isActive = false;
@@ -33,9 +34,6 @@ public class Rocket : MonoBehaviour
     }
 
     public float Buy(int shareCount) {
-        isActive = true;
-        velocity = velocityGainPerShare * shareCount;
-
         sharesOwned += shareCount;
         return shareValue * shareCount;
     }
@@ -47,5 +45,16 @@ public class Rocket : MonoBehaviour
     public float Sell(int shareCount) {
         sharesOwned -= shareCount;
         return shareValue * shareCount;
+    }
+
+    public bool CanHype(float cash) {
+        return cash >= hypeCost;
+    }
+
+    public float Hype() {
+        isActive = true;
+        velocity += hypeVelocityGain;
+
+        return hypeCost;
     }
 }
