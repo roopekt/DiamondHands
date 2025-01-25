@@ -25,11 +25,11 @@ public class FinancialAgent : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A) )
         {
-            Buy();
+            Buy(Input.GetKey(KeyCode.LeftShift) ? 5  : 1);
         }
         if (Input.GetKeyDown(KeyCode.S) )
         {
-            Sell();
+            Sell(Input.GetKey(KeyCode.LeftShift) ? 5 : 1);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -41,19 +41,19 @@ public class FinancialAgent : MonoBehaviour
         }
     }
 
-    public void Buy() {
+    public void Buy(int amt = 1) {
         var rocket = GetRocket();
-        if (rocket.CanBuy(1, cash)) {
-            lastBought = rocket.Buy(1);
+        if (rocket.CanBuy(amt, cash)) {
+            lastBought = rocket.Buy(amt);
             cash -= lastBought;
             graph?.MakePurchase(true);
         }
     }
 
-    public void Sell() {
+    public void Sell(int amt = 1) {
         var rocket = GetRocket();
-        if (rocket.CanSell(1)) {
-            lastSold = rocket.Sell(1);
+        if (rocket.CanSell(amt)) {
+            lastSold = rocket.Sell(amt);
             cash += lastSold;
             graph?.MakePurchase(false);
         }

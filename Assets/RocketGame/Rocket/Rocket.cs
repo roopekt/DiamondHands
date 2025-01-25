@@ -1,22 +1,90 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
     public float shareValue = 1f;
     public int sharesOwned = 0;
-    public float gravity = 1f;
     public float hypeVelocityGain = 1f;
     public float saleVelocityGain = 1f;
     public float randomVelocityGain = .5f;
-    public float constantXSpeed = 1f;
     public float hypeCost = 1f;
     public TextMeshProUGUI heightText;
 
-    private float velocity = 0f;
-    float randomVelocity = 0;
-    float lastRandomVelocityTime = 3;
+   public  float velocity = 0f;
+    void AdjustVelocity()
+    {
+        float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? .25f : 0 ) - (HasRandomEvent(StockEvent.crash) ? -.9f : 0);
+        velocity = (Random.Range(-.5f  , 1f)+ adjust) * InfluenceVel();
+        if (HasRandomEvent(StockEvent.chaos))
+            velocity *= Random.value * 2;
+    }
+    float InfluenceVel()
+    {
+        float final = .5f * Mathf.Sign(influence) + influence;
+        return final * 2;
+
+    }
+
+    float influence = 0;
+
+
+    public float constantXSpeed = 1f;
+
+    float playerBoostInfluence;
+    float playerBoostDuration;
+
+    public float randomEventChance = .33f;
+    public float randomEventInterfal = 3;
+    public float randomEventDuration = 4;
+    float nextRandomEvent = 0;
+    void CheckRandomEvent()
+    {
+        if (nextRandomEvent < Time.time)
+        {
+            if (Random.value < randomEventChance) {
+                RandomEvent();
+            }
+            else
+            {
+                nextRandomEvent = Time.time  + randomEventInterfal;
+            }
+        }
+    }
+    void RandomEvent()
+    {
+        FireEvent((StockEvent)Random.Range(0, (int)StockEvent.total), randomEventDuration);
+    }
+    void FireEvent(StockEvent evtT, float evtDur)
+    {
+        Debug.Log($"Fire randon event {evtT} for duration {evtDur}");
+        randomEvent = evtT;
+        randomEventDuraiton = evtDur;
+        nextRandomEvent = Time.time + evtDur + randomEventInterfal;
+        if (evtT == StockEvent.inflluencedump)
+        {
+            if (influence > 3)
+                influence *= .5f;
+            influence -= Random.value;
+        }
+    }
+    public enum StockEvent
+    {
+        crash,
+        rise,
+        chaos,
+        inflluencedump,
+        total,
+    }
+    StockEvent randomEvent;
+    float randomEventDuraiton;
+
+    bool HasRandomEvent(StockEvent eventType)
+    {
+        return randomEventDuraiton > Time.time && eventType == randomEvent;
+    }
+
+    float adjustVelocityTime = 3;
     public bool isActive = false;
     private Vector3 initialPosition;
 
@@ -34,13 +102,13 @@ public class Rocket : MonoBehaviour
         hypeCost = GetHypeCost();
         if (!isActive) return;
 
-        velocity -= gravity * Time.deltaTime;
-        if (lastRandomVelocityTime < Time.time)
+        CheckRandomEvent();
+        if (adjustVelocityTime < Time.time)
         {
-            randomVelocity = transform.position.y < 10 ? 0 : Random.Range(-1, 1) * (velocity * randomVelocityGain);
-            lastRandomVelocityTime = Time.time + 3 *  Random.value;
+            AdjustVelocity();
+            adjustVelocityTime = Time.time + (HasRandomEvent(StockEvent.chaos) ? Random.value : 1) *.5f;
         }
-        shareValue += GetVelY() * Time.deltaTime;
+        shareValue += velocity * Time.deltaTime;
         if (shareValue < 0f) {
             Destroy(gameObject);
             return;
@@ -49,16 +117,21 @@ public class Rocket : MonoBehaviour
         transform.position = initialPosition + Vector3.up * shareValue ;
 
     }
-    public float GetVelY()
+    public void Launch()
     {
-        return (velocity + randomVelocity);
+        if (isActive) return;
+        AdjustVelocity();
+        isActive = true;
+        FireEvent(StockEvent.rise, 1);
     }
 
-    public float GetBuyPrice() {
-        return shareValue;
+    public float GetBuyPrice()
+    {
+        return (HasRandomEvent(StockEvent.rise) ? .5f : 1f) * shareValue;
     }
-    public float GetSellPrice() {
-        return shareValue;
+    public float GetSellPrice()
+    {
+        return (HasRandomEvent(StockEvent.chaos) ? .5f : 1f) * shareValue;
     }
 
     public bool CanBuy(int shareCount, float cash) {
@@ -67,7 +140,8 @@ public class Rocket : MonoBehaviour
 
     public float Buy(int shareCount) {
         sharesOwned += shareCount;
-        velocity += saleVelocityGain * Random.value;
+        influence += saleVelocityGain * 2 * Random.value ;
+        influence = Mathf.Clamp(influence, -10, 10);
         return shareValue * shareCount;
     }
 
@@ -77,8 +151,9 @@ public class Rocket : MonoBehaviour
 
     public float Sell(int shareCount) {
         sharesOwned -= shareCount;
-        velocity -= saleVelocityGain * Random.value;
-        return shareValue * shareCount;
+        influence -= saleVelocityGain * (1+ Random.value);
+        influence = Mathf.Clamp(influence, -10, 10);
+        return GetSellPrice() * shareCount;
     }
     public float GetHypeCost()
     {
@@ -91,9 +166,11 @@ public class Rocket : MonoBehaviour
     }
 
     public float Hype() {
-        isActive = true;
-        velocity += hypeVelocityGain;
+        float cost = GetHypeCost();
+        playerBoostInfluence = hypeVelocityGain;
+        playerBoostDuration = Mathf.Max(Time.time + 3, playerBoostDuration + 3);
 
-        return GetHypeCost();
+        Launch();
+        return cost;
     }
 }
