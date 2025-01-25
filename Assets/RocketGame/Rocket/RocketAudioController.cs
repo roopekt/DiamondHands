@@ -8,8 +8,10 @@ public class RocketAudioController : MonoBehaviour
     public AudioClip sputteringClip;
     public float sputteringVelocity = 1f;
     public float velocityForMaxThrusterPower = 10f;
+    public AudioSource deathAudioSource;
 
     private ThrusterState thrusterState = ThrusterState.Off;
+    private bool isAlive = true;
 
     enum ThrusterState {
         On,
@@ -20,6 +22,14 @@ public class RocketAudioController : MonoBehaviour
     void Update()
     {
         UpdateThrusterAudio();
+        ExplodeIfDead();
+    }
+
+    void ExplodeIfDead() {
+        if (isAlive && !rocket.isAlive) {
+            isAlive = false;
+            deathAudioSource.Play();
+        }
     }
 
     void UpdateThrusterAudio() {

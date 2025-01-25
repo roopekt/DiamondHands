@@ -18,6 +18,7 @@ public class Rocket : MonoBehaviour
     float randomVelocity = 0;
     float lastRandomVelocityTime = 3;
     public bool isActive = false;
+    public bool isAlive = true;
     private Vector3 initialPosition;
 
     void Start() {
@@ -27,6 +28,8 @@ public class Rocket : MonoBehaviour
 
     void Update()
     {
+        if (!isAlive) return;
+
         if (heightText != null)
         {
             heightText.text = shareValue.ToString("F2") + " €";
@@ -42,7 +45,7 @@ public class Rocket : MonoBehaviour
         }
         shareValue += GetVelY() * Time.deltaTime;
         if (shareValue < 0f) {
-            Destroy(gameObject);
+            isAlive = false;
             return;
         }
         initialPosition += Vector3.right * constantXSpeed * Time.deltaTime ;
@@ -62,6 +65,7 @@ public class Rocket : MonoBehaviour
     }
 
     public bool CanBuy(int shareCount, float cash) {
+        if (!isAlive) return false;
         return shareValue * shareCount <= cash;
     }
 
@@ -72,6 +76,7 @@ public class Rocket : MonoBehaviour
     }
 
     public bool CanSell(int shareCount) {
+        if (!isAlive) return false;
         return shareCount <= sharesOwned;
     }
 
@@ -86,6 +91,7 @@ public class Rocket : MonoBehaviour
     }
 
     public bool CanHype(float cash) {
+        if (!isAlive) return false;
         return cash >= GetHypeCost()
 ;
     }
