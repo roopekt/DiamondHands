@@ -8,6 +8,6 @@ public class SharesText : MonoBehaviour
 
     void Update()
     {
-        text.text = playerRocket.sharesOwned.ToString();
+        text.text = playerRocket.sharesOwned.ToString("F2");
     }
 }

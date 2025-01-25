@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -6,11 +7,11 @@ public class Rocket : MonoBehaviour
      public float shareValue = 1f;
      public int sharesOwned = 0;
      public float gravity = 1f;
-     public float hypeCost = 1f;
      public float hypeVelocityGain = 1f;
      public float saleVelocityGain = 1f;
      public float randomVelocityGain = .5f;
      public float constantXSpeed = 1f;
+     public TextMeshProUGUI heightText;
 
     private float velocity = 0f;
     float randomVelocity = 0;
@@ -53,9 +54,6 @@ public class Rocket : MonoBehaviour
     public float GetSellPrice() {
         return shareValue;
     }
-    public float GetHypePrice() {
-        return hypeCost;
-    }
 
     public bool CanBuy(int shareCount, float cash) {
         return shareValue * shareCount <= cash;
@@ -87,10 +85,9 @@ public class Rocket : MonoBehaviour
     }
 
     public float Hype() {
-        hypeCost = GetHypeCost();
         isActive = true;
         velocity += hypeVelocityGain;
 
-        return hypeCost;
+        return GetHypeCost();
     }
 }
