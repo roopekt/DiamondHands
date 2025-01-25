@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 1923244712674496856}
   - component: {fileID: 1458430496291908263}
   - component: {fileID: 3664668239816971531}
-  - component: {fileID: 2306305481272071235}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -58,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2548340723879022066}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.99, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -132,40 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21580022bc9bdb42bb1ef52b51d316e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowTarget: {fileID: 739403874468022743}
-  maximumRotationSpeed: 60
-  maximumVelocity: 33
-  sprintAngle: 5
-  turnSpeed: 0.33
-  followRange: 1
-  rigidbody: {fileID: 2306305481272071235}
---- !u!50 &2306305481272071235
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548340723879022066}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  rocketParent: {fileID: 8618751745527495133}
 --- !u!1 &4573516314224232741
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,3 +356,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2963660451408967949, guid: cbb9b376b41c8b21ab373749d518d6f7, type: 3}
   m_PrefabInstance: {fileID: 1200384237437891335}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8618751745527495133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7436404055746218714, guid: cbb9b376b41c8b21ab373749d518d6f7, type: 3}
+  m_PrefabInstance: {fileID: 1200384237437891335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146010274713586186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4acfa4c26372f147a961a49ecf8a4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
