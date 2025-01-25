@@ -690,10 +690,6 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 42806066}
-    - target: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: lineWidth
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7860823441991322193, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: transactionShareCountSilder
       value: 
