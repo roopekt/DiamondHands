@@ -14,6 +14,7 @@ public class Rocket : MonoBehaviour
 
     void Start() {
         initialPosition = transform.position;
+        transform.position = initialPosition + Vector3.up * shareValue;
     }
 
     void Update() {
