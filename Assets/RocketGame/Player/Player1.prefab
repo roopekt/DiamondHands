@@ -238,7 +238,7 @@ MonoBehaviour:
   graph: {fileID: 6491510948759547947}
   lastSold: 0
   lastBought: 0
-  insightPower: 0.25
+  insightPower: 0.75
   insightDuration: 7
   insightCooldown: 50
 --- !u!114 &6491510948759547947

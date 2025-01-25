@@ -213,9 +213,9 @@ MonoBehaviour:
   heightText: {fileID: 571009330681035516}
   velocity: 0
   constantXSpeed: 1
-  randomEventChance: 0.25
-  randomEventInterfal: 2
-  randomEventDuration: 5
+  randomEventChance: 0.333
+  randomEventInterfal: 1
+  randomEventDuration: 3
   isActive: 0
 --- !u!1 &7485103173754543202
 GameObject:
