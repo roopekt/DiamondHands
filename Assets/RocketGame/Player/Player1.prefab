@@ -79,7 +79,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeObjs: {fileID: 7562817455465458384}
   inactiveObjs: {fileID: 2922739059507866267}
-  precacheData: []
+  precacheData:
+  - cachePrefab: {fileID: 5007972628344262690, guid: 7c2e325ce0f84fb499619fc3fcf009bc, type: 3}
+    cacheAmount: 5
+  - cachePrefab: {fileID: 1667141671142011603, guid: 18159273d33a2e4478dc20811fab3c2a, type: 3}
+    cacheAmount: 5
 --- !u!1 &4931122393549862171
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de660813b0705fec9c6fd5bd6e8a2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cash: 3
+  cash: 25
   transactionShareCountSilder: {fileID: 0}
 --- !u!114 &6491510948759547947
 MonoBehaviour:
@@ -142,9 +146,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4146010274713586186}
+  drawInterval: 0.25
+  totalLines: 10
   pool: {fileID: 2529459458220410782}
-  lineUpPrefab: {fileID: 267307922942442679, guid: 7c2e325ce0f84fb499619fc3fcf009bc, type: 3}
-  lineDnPrefab: {fileID: 8526192017895130948, guid: 18159273d33a2e4478dc20811fab3c2a, type: 3}
+  lineUpPrefab: {fileID: 5007972628344262690, guid: 7c2e325ce0f84fb499619fc3fcf009bc, type: 3}
+  lineDnPrefab: {fileID: 1667141671142011603, guid: 18159273d33a2e4478dc20811fab3c2a, type: 3}
 --- !u!1 &8199248857159484137
 GameObject:
   m_ObjectHideFlags: 0

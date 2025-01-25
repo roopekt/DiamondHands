@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     {
         transform.position = new Vector3(
             Mathf.Max(target.position.x, 0),
-            transform.position.y,
+            Mathf.Max(target.position.y, 0),
             transform.position.z);
     }
 }

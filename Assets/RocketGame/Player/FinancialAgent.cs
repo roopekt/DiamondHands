@@ -5,7 +5,7 @@ public class FinancialAgent : MonoBehaviour
 {
     [SerializeField] public float cash = 2f;
     [SerializeField] public Slider transactionShareCountSilder;
-
+    public StockGraph graph;
     // private int transactionShareCount = 1;
 
     void Update() {
@@ -16,6 +16,7 @@ public class FinancialAgent : MonoBehaviour
         var rocket = GetRocket();
         if (rocket.CanBuy(1, cash)) {
             cash -= rocket.Buy(1);
+            graph?.MakePurchase(true);
         }
     }
 
@@ -23,6 +24,7 @@ public class FinancialAgent : MonoBehaviour
         var rocket = GetRocket();
         if (rocket.CanSell(1)) {
             cash += rocket.Sell(1);
+            graph?.MakePurchase(false);
         }
     }
 

@@ -15,9 +15,25 @@ public class StockGraph : MonoBehaviour
     public GameObject lineUpPrefab;
     public GameObject lineDnPrefab;
 
+    public GameObject buyPrefab;
+    public GameObject sellPrefab;
+
     private void Start()
     {
         BeginDrawingLine();
+    }
+    public void MakePurchase(bool buy)
+    {
+        if (buy)
+        {
+        GameObject indicator = pool.PoolItem(buyPrefab);
+            indicator.transform.position = target.transform.position;
+        }
+        else
+        {
+            GameObject indicator = pool.PoolItem(sellPrefab);
+            indicator.transform.position = target.transform.position;
+        }
     }
     public void BeginDrawingLine()
     {
