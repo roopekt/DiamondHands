@@ -82,6 +82,7 @@
     <Compile Include="Assets/RocketGame/Rocket/RocketFollower.cs" />
     <Compile Include="Assets/RocketGame/UI/SellPriceDisplayer.cs" />
     <Compile Include="Assets/CompanyGame/Bubble/BubbleMechanicsController.cs" />
+    <Compile Include="Assets/RocketGame/Rocket/RocketAudioController.cs" />
     <Compile Include="Assets/RocketGame/UI/SharesText.cs" />
     <Compile Include="Assets/RocketGame/Graph/StockGraph.cs" />
     <Compile Include="Assets/Utils/EntityBase.cs" />
