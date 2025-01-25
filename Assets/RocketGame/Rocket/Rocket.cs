@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    [SerializeField] public float shareValue = 1f;
-    [SerializeField] public int sharesOwned = 0;
-    [SerializeField] public float gravity = 1f;
-    [SerializeField] public float hypeCost = 1f;
-    [SerializeField] public float hypeVelocityGain = 1f;
+    public float shareValue = 1f;
+    public int sharesOwned = 0;
+    public float gravity = 1f;
+    public float hypeCost = 1f;
+    public float hypeVelocityGain = 1f;
+    public TMPro.TextMeshProUGUI heightText;
 
     private float velocity = 0f;
     private bool isActive = false;
     private Vector3 initialPosition;
 
-    public TMPro.TextMeshProUGUI valueField;
     void Start() {
         initialPosition = transform.position;
         transform.position = initialPosition + Vector3.up * shareValue;
@@ -21,9 +21,9 @@ public class Rocket : MonoBehaviour
 
     void Update()
     {
-        if (valueField != null)
+        if (heightText != null)
         {
-            valueField.text = shareValue + "�";
+            heightText.text = shareValue.ToString("F2") + " €";
         }
         if (!isActive) return;
 

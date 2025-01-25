@@ -8,6 +8,6 @@ public class HypePriceDisplayer : MonoBehaviour
 
     void Update()
     {
-        textElement.text = (-rocket.GetHypePrice()).ToString() + " €";
+        textElement.text = (-rocket.GetHypePrice()).ToString("F2") + " €";
     }
 }

@@ -208,7 +208,7 @@ MonoBehaviour:
   gravity: 0.6
   hypeCost: 1
   hypeVelocityGain: 2
-  valueField: {fileID: 571009330681035516}
+  heightText: {fileID: 571009330681035516}
 --- !u!1 &8638647821342137549
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,6 @@ public class SellPriceDisplayer : MonoBehaviour
 
     void Update()
     {
-        textElement.text = rocket.GetSellPrice().ToString() + " €";
+        textElement.text = rocket.GetSellPrice().ToString("F2") + " €";
     }
 }
