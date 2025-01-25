@@ -40,7 +40,7 @@ public class EntityManager : MonoBehaviour
         {
             entity.Despawn();
             entites.Remove(entity);
-            GameManager.instance.entityPool.DeactivateObject(entity.gameObject);
+            //GameManager.instance.entityPool.DeactivateObject(entity.game);
         }
     }
 }

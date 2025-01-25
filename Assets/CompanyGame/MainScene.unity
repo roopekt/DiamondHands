@@ -698,6 +698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5b734b6babd72085a2efa56cc96277c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PelletPrefab: {fileID: 4488445940599754357, guid: fd0c4b5826417878589d10360bde0a12, type: 3}
 --- !u!114 &1068842020
 MonoBehaviour:
   m_ObjectHideFlags: 0
