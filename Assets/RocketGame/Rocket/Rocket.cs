@@ -16,19 +16,23 @@ public class Rocket : MonoBehaviour
     {
         if (HasRandomEvent(StockEvent.crash) && shareValue > 10)
         {
-            velocity = Random.Range(.2f, -1f)  * Mathf.Abs(InfluenceVel());
+            velocity = Random.Range(.2f, -1f) * Mathf.Abs(InfluenceVel());
+        }
+        else
+        if (HasRandomEvent(StockEvent.rise) )
+        {
+            velocity = Random.Range(0, 2f) * Mathf.Abs(InfluenceVel());
         }
         else
         {
-            float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? playerBoostInfluence : 0);
-            velocity = (Random.Range(-8f, 1f) + adjust) * InfluenceVel();
+            velocity = (Random.Range(-.8f, 1f) ) * InfluenceVel();
         if (HasRandomEvent(StockEvent.chaos))
             velocity *= Random.value * 2;
         }
     }
     float InfluenceVel()
     {
-        float final = .5f * Mathf.Sign(influence) + influence;
+        float final = .5f * Mathf.Sign(influence) + influence + ((playerBoostDuration > Time.time) ? playerBoostInfluence : 0);
         return final ;
     }
 
