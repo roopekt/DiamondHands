@@ -8,6 +8,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] public float gravity = 1f;
     [SerializeField] public float hypeCost = 1f;
     [SerializeField] public float hypeVelocityGain = 1f;
+    [SerializeField] public float constantXSpeed = 1f;
 
     private float velocity = 0f;
     private bool isActive = false;
@@ -32,6 +33,7 @@ public class Rocket : MonoBehaviour
         if (shareValue < 0f) {
             Destroy(gameObject);
         }
+        initialPosition += Vector3.right * constantXSpeed * Time.deltaTime;
         transform.position = initialPosition + Vector3.up * shareValue;
 
     }
