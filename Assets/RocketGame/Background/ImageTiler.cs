@@ -16,7 +16,7 @@ public class ImageTiler : MonoBehaviour
 
     void Start()
     {
-        tileSize = (Vector2)tilePrefab.transform.localScale;
+        tileSize = (Vector2)tilePrefab.GetComponent<SpriteRenderer>().bounds.size;
         camera = Camera.main;
         tiles = new Dictionary<Vector2Int, GameObject>();
     }
