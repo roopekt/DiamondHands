@@ -23,7 +23,7 @@ public class Rocket : MonoBehaviour
     {
         if (valueField != null)
         {
-            valueField.text = shareValue + "€";
+            valueField.text = shareValue + "ï¿½";
         }
         if (!isActive) return;
 
@@ -34,6 +34,16 @@ public class Rocket : MonoBehaviour
         }
         transform.position = initialPosition + Vector3.up * shareValue;
 
+    }
+
+    public float GetBuyPrice() {
+        return shareValue;
+    }
+    public float GetSellPrice() {
+        return shareValue;
+    }
+    public float GetHypePrice() {
+        return hypeCost;
     }
 
     public bool CanBuy(int shareCount, float cash) {

@@ -559,6 +559,10 @@ PrefabInstance:
       propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
+    - target: {fileID: 1957837588004729285, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 333435664}
     - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -567,6 +571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5487263864990620359, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 333435664}
     - target: {fileID: 6037764886478321357, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: playerRocket
       value: 
@@ -651,6 +659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6574277679505733598, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 333435664}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
