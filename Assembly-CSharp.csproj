@@ -69,6 +69,7 @@
     <Compile Include="Assets/Utils/ObjectPool.cs" />
     <Compile Include="Assets/Utils/ComponentHolder.cs" />
     <Compile Include="Assets/Utils/GameManager.cs" />
+    <Compile Include="Assets/RocketGame/SharesText.cs" />
     <Compile Include="Assets/CompanyGame/Bubble/MovementController.cs" />
     <Compile Include="Assets/RocketGame/Rocket.cs" />
     <Compile Include="Assets/Fish/FishCon.cs" />
