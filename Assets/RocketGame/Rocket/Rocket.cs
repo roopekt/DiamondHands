@@ -14,8 +14,8 @@ public class Rocket : MonoBehaviour
    public  float velocity = 0f;
     void AdjustVelocity()
     {
-        float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? .25f : 0 ) - (HasRandomEvent(StockEvent.crash) ? -.9f : 0);
-        velocity = (Random.Range(-.5f  , 1f)+ adjust) * InfluenceVel();
+        float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? .666f : 0 ) - (HasRandomEvent(StockEvent.crash) ? -.9f : 0);
+        velocity = (Random.Range(-1f  , 1f)+ adjust) * InfluenceVel();
         if (HasRandomEvent(StockEvent.chaos))
             velocity *= Random.value * 2;
     }
@@ -59,13 +59,13 @@ public class Rocket : MonoBehaviour
     {
         Debug.Log($"Fire randon event {evtT} for duration {evtDur}");
         randomEvent = evtT;
-        randomEventDuraiton = evtDur;
+        randomEventDuraiton = Time.time + evtDur;
         nextRandomEvent = Time.time + evtDur + randomEventInterfal;
         if (evtT == StockEvent.inflluencedump)
         {
-            if (influence > 3)
+            if (influence > 10)
                 influence *= .5f;
-            influence -= Random.value;
+            influence -= Random.value * 3;
         }
     }
     public enum StockEvent

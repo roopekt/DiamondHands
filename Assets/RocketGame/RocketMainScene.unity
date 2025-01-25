@@ -682,25 +682,12 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 42806066}
-    - target: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: lineWidth
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7860823441991322193, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: transactionShareCountSilder
       value: 
       objectReference: {fileID: 1341449715}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: randomEventChance
-      value: 0.6666
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: randomEventInterfal
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8595386758252687205, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}

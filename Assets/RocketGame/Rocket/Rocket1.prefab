@@ -206,13 +206,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shareValue: 1
   sharesOwned: 0
-  gravity: 0.6
-  hypeCost: 1
   hypeVelocityGain: 2
   saleVelocityGain: 0.333
   randomVelocityGain: 1.25
-  constantXSpeed: 1
+  hypeCost: 1
   heightText: {fileID: 571009330681035516}
+  velocity: 0
+  constantXSpeed: 1
+  randomEventChance: 0.25
+  randomEventInterfal: 2
+  randomEventDuration: 5
   isActive: 0
 --- !u!1 &7485103173754543202
 GameObject:

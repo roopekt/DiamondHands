@@ -261,6 +261,8 @@ MonoBehaviour:
   lineDnPrefab: {fileID: 1667141671142011603, guid: 18159273d33a2e4478dc20811fab3c2a, type: 3}
   buyPrefab: {fileID: 2605753071083421646, guid: 3a7bb094ff8e16f4f9a882bbd45929de, type: 3}
   sellPrefab: {fileID: 5577762214082923744, guid: 3fe93e0d9a6126941baa8fee258a3831, type: 3}
+  camera: {fileID: 0}
+  lineWidth: 5
 --- !u!1 &8199248857159484137
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +347,8 @@ PrefabInstance:
       value: Rocket1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7485103173754543202, guid: cbb9b376b41c8b21ab373749d518d6f7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbb9b376b41c8b21ab373749d518d6f7, type: 3}
