@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,11 @@ public class FinancialAgent : MonoBehaviour
 
     public float lastSold = 0;
     public float lastBought = 0;
+
+    public float insightPower = .5f;
+    public float insightDuration = 3;
+    public float insightCooldown = 30;
+    float lastInsightUse = 0;
     void Update()
     {
         KeyboardInput();
@@ -25,9 +31,13 @@ public class FinancialAgent : MonoBehaviour
         {
             Sell();
         }
-        if (Input.GetKeyDown(KeyCode.D) )
+        if (Input.GetKeyDown(KeyCode.D))
         {
             Hype();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Insight();
         }
     }
 
@@ -54,6 +64,23 @@ public class FinancialAgent : MonoBehaviour
         if (rocket.CanHype(cash)) {
             cash -= rocket.Hype();
         }
+    }
+
+    public void Insight() {
+        if (CanInsight()) {
+            StartCoroutine(InsightCoroutine());
+            lastInsightUse = Time.time + insightDuration;
+        }
+    }
+    public bool CanInsight()
+    {
+      return GetRocket().isActive && lastInsightUse < Time.time;
+    }
+    IEnumerator InsightCoroutine()
+    {
+        Time.timeScale = insightPower;
+        yield return new WaitForSecondsRealtime(insightDuration);
+        Time.timeScale = 1;
     }
 
     Rocket GetRocket() {
