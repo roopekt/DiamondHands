@@ -9,6 +9,6 @@ public class RocketFollower : MonoBehaviour
     {
         transform.position = rocketParent.transform.position;
         if (rocketParent.isActive)
-        transform.up = new Vector3(rocketParent.constantXSpeed, rocketParent.GetVelY(), 0);
+        transform.up = new Vector3(rocketParent.constantXSpeed, rocketParent.velocity, 0);
     }
 }
