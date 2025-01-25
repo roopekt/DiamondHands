@@ -12,11 +12,17 @@ public class Rocket : MonoBehaviour
     private bool isActive = false;
     private Vector3 initialPosition;
 
+    public TMPro.TextMeshProUGUI valueField;
     void Start() {
         initialPosition = transform.position;
     }
 
-    void Update() {
+    void Update()
+    {
+        if (valueField != null)
+        {
+            valueField.text = shareValue + "€";
+        }
         if (!isActive) return;
 
         velocity -= gravity * Time.deltaTime;
@@ -25,6 +31,7 @@ public class Rocket : MonoBehaviour
             Destroy(gameObject);
         }
         transform.position = initialPosition + Vector3.up * shareValue;
+
     }
 
     public bool CanBuy(int shareCount, float cash) {
