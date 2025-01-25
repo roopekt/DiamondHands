@@ -9,9 +9,13 @@ public class RocketAudioController : MonoBehaviour
     public float sputteringVelocity = 1f;
     public float velocityForMaxThrusterPower = 10f;
     public AudioSource deathAudioSource;
+    public AudioSource alarmAudioSource;
+    public float alarmTime = 1.5f;
+
 
     private ThrusterState thrusterState = ThrusterState.Off;
     private bool isAlive = true;
+    private bool alarmOn = false;
 
     enum ThrusterState {
         On,
@@ -23,6 +27,7 @@ public class RocketAudioController : MonoBehaviour
     {
         UpdateThrusterAudio();
         ExplodeIfDead();
+        UpdateAlarm();
     }
 
     void ExplodeIfDead() {
@@ -59,6 +64,21 @@ public class RocketAudioController : MonoBehaviour
         }
         else {
             thrusterAudioSource.volume = 1f;
+        }
+    }
+
+    void UpdateAlarm() {
+        float timeToCrashEstimate = -rocket.shareValue / rocket.GetVelY();
+        bool alarmShouldBeOn = isAlive && 0f < timeToCrashEstimate && timeToCrashEstimate < alarmTime;
+
+        if (alarmShouldBeOn != alarmOn) {
+            alarmOn = alarmShouldBeOn;
+            if (alarmShouldBeOn) {
+                alarmAudioSource.Play();
+            }
+            else {
+                alarmAudioSource.Stop();
+            }
         }
     }
 }
