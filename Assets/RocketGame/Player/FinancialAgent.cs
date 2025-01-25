@@ -10,8 +10,25 @@ public class FinancialAgent : MonoBehaviour
 
     public float lastSold = 0;
     public float lastBought = 0;
-    void Update() {
-        //transactionShareCount = (int)transactionShareCountSilder.value;
+    void Update()
+    {
+        KeyboardInput();
+
+    }
+    void KeyboardInput()
+    {
+        if (Input.GetKeyDown(KeyCode.A) )
+        {
+            Buy();
+        }
+        if (Input.GetKeyDown(KeyCode.S) )
+        {
+            Sell();
+        }
+        if (Input.GetKeyDown(KeyCode.D) )
+        {
+            Hype();
+        }
     }
 
     public void Buy() {
