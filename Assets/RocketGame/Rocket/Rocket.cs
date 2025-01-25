@@ -140,7 +140,7 @@ public class Rocket : MonoBehaviour
 
     public float GetBuyPrice()
     {
-        return (HasRandomEvent(StockEvent.rise) ? .5f : 1f) * shareValue;
+        return (HasRandomEvent(StockEvent.rise) ? 2 : 1f) * shareValue;
     }
     public float GetSellPrice()
     {
