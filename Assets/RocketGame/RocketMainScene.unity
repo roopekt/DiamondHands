@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &333435664 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-  m_PrefabInstance: {fileID: 9067366614725243793}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4acfa4c26372f147a961a49ecf8a4a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &333435665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 739403874468022743, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
@@ -291,6 +280,7 @@ MonoBehaviour:
   - transform: {fileID: 333435665}
     padding: 5
   camera: {fileID: 519420031}
+  MinSize: 5
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,7 +608,7 @@ PrefabInstance:
     - target: {fileID: 8404146700837516602, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 9067366614725243794}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -648,30 +638,22 @@ PrefabInstance:
       propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
-    - target: {fileID: 2525702499285719380, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: playerRocket
+    - target: {fileID: 3445606729224558161, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: rocket
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9067366614725243794}
     - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1862731545}
-    - target: {fileID: 3734764584132759089, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
     - target: {fileID: 5074348380059164999, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
-    - target: {fileID: 5487263864990620359, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+    - target: {fileID: 5852608557522447679, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: rocket
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6037764886478321357, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: playerRocket
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9067366614725243794}
     - target: {fileID: 6199075988686252913, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -752,10 +734,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6574277679505733598, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: rocket
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -822,11 +800,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
---- !u!4 &9067366614725243794 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 739403874468022743, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+--- !u!114 &9067366614725243794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
   m_PrefabInstance: {fileID: 9067366614725243793}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4acfa4c26372f147a961a49ecf8a4a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -837,3 +821,4 @@ SceneRoots:
   - {fileID: 1755359788}
   - {fileID: 1898309339}
   - {fileID: 8406762289463961410}
+  - {fileID: 519420032}

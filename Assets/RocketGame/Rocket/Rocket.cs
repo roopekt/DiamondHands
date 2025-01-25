@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class Rocket : MonoBehaviour
      public float saleVelocityGain = 1f;
      public float randomVelocityGain = .5f;
      public float constantXSpeed = 1f;
+    public TextMeshProUGUI heightText;
 
     private float velocity = 0f;
     float randomVelocity = 0;

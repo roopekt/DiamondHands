@@ -552,7 +552,6 @@ GameObject:
   - component: {fileID: 5835675896588269693}
   - component: {fileID: 3208658149127155207}
   - component: {fileID: 1427623765185413716}
-  - component: {fileID: 3734764584132759089}
   m_Layer: 5
   m_Name: Last Sold
   m_TagString: Untagged
@@ -678,20 +677,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &3734764584132759089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2401743073134699378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a968832499a43314a91cc2637aea301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentToTrack: {fileID: 0}
-  text: {fileID: 1427623765185413716}
 --- !u!1 &2897772961320758722
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,7 +857,7 @@ GameObject:
   - component: {fileID: 673351398515456611}
   - component: {fileID: 2621964142976241282}
   - component: {fileID: 4842946822879077854}
-  - component: {fileID: 1957837588004729285}
+  - component: {fileID: 3445606729224558161}
   m_Layer: 5
   m_Name: HypePriceText
   m_TagString: Untagged
@@ -998,7 +983,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1957837588004729285
+--- !u!114 &3445606729224558161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,7 +1008,7 @@ GameObject:
   - component: {fileID: 1325150094944146649}
   - component: {fileID: 6131349461554939507}
   - component: {fileID: 1489206856176593326}
-  - component: {fileID: 6574277679505733598}
+  - component: {fileID: 5852608557522447679}
   m_Layer: 5
   m_Name: SellPriceText
   m_TagString: Untagged
@@ -1149,7 +1134,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6574277679505733598
+--- !u!114 &5852608557522447679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1278,6 +1263,8 @@ RectTransform:
   - {fileID: 4770713690374758681}
   - {fileID: 4114791843625730820}
   - {fileID: 5835675896588269693}
+  - {fileID: 673351398515456611}
+  - {fileID: 1325150094944146649}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2010,7 +1997,6 @@ GameObject:
   - component: {fileID: 4114791843625730820}
   - component: {fileID: 3490575637386273262}
   - component: {fileID: 907327075996938014}
-  - component: {fileID: 2525702499285719380}
   m_Layer: 5
   m_Name: Last Bought
   m_TagString: Untagged
@@ -2136,20 +2122,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2525702499285719380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9076942583320062052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e7f32021c9e5664a9cd971fb2228559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRocket: {fileID: 0}
-  text: {fileID: 907327075996938014}
 --- !u!1 &9099263113445891890
 GameObject:
   m_ObjectHideFlags: 0
