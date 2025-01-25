@@ -315,17 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de660813b0705fec9c6fd5bd6e8a2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1862731547 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-  m_PrefabInstance: {fileID: 9067366614725243793}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73923ec11f83f2945be21da944f50ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1898309337
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,8 +483,20 @@ PrefabInstance:
       propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
+    - target: {fileID: 2509017302020824515, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: agentToTrack
+      value: 
+      objectReference: {fileID: 1862731545}
+    - target: {fileID: 2525702499285719380, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: playerRocket
+      value: 
+      objectReference: {fileID: 333435664}
     - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1862731545}
+    - target: {fileID: 3734764584132759089, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
     - target: {fileID: 5074348380059164999, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
@@ -643,18 +644,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: buyPrefab
-      value: 
-      objectReference: {fileID: 2605753071083421646, guid: 3a7bb094ff8e16f4f9a882bbd45929de, type: 3}
-    - target: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: sellPrefab
-      value: 
-      objectReference: {fileID: 5577762214082923744, guid: 3fe93e0d9a6126941baa8fee258a3831, type: 3}
-    - target: {fileID: 7860823441991322193, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: graph
-      value: 
-      objectReference: {fileID: 1862731547}
     - target: {fileID: 7860823441991322193, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: transactionShareCountSilder
       value: 

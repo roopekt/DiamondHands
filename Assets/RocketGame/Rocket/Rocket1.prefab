@@ -209,6 +209,7 @@ MonoBehaviour:
   gravity: 0.6
   hypeCost: 1
   hypeVelocityGain: 2
+  saleVelocityGain: 0.333
   constantXSpeed: 1
   valueField: {fileID: 571009330681035516}
 --- !u!1 &7485103173754543202

@@ -133,6 +133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cash: 25
   transactionShareCountSilder: {fileID: 0}
+  graph: {fileID: 6491510948759547947}
+  lastSold: 0
+  lastBought: 0
 --- !u!114 &6491510948759547947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,10 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 4146010274713586186}
   drawInterval: 0.25
-  totalLines: 10
+  totalLines: 50
   pool: {fileID: 2529459458220410782}
   lineUpPrefab: {fileID: 5007972628344262690, guid: 7c2e325ce0f84fb499619fc3fcf009bc, type: 3}
   lineDnPrefab: {fileID: 1667141671142011603, guid: 18159273d33a2e4478dc20811fab3c2a, type: 3}
+  buyPrefab: {fileID: 2605753071083421646, guid: 3a7bb094ff8e16f4f9a882bbd45929de, type: 3}
+  sellPrefab: {fileID: 5577762214082923744, guid: 3fe93e0d9a6126941baa8fee258a3831, type: 3}
 --- !u!1 &8199248857159484137
 GameObject:
   m_ObjectHideFlags: 0

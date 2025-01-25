@@ -8,6 +8,8 @@ public class FinancialAgent : MonoBehaviour
     public StockGraph graph;
     // private int transactionShareCount = 1;
 
+    public float lastSold = 0;
+    public float lastBought = 0;
     void Update() {
         //transactionShareCount = (int)transactionShareCountSilder.value;
     }
@@ -15,7 +17,8 @@ public class FinancialAgent : MonoBehaviour
     public void Buy() {
         var rocket = GetRocket();
         if (rocket.CanBuy(1, cash)) {
-            cash -= rocket.Buy(1);
+            lastBought = rocket.Buy(1);
+            cash -= lastBought;
             graph?.MakePurchase(true);
         }
     }
@@ -23,7 +26,8 @@ public class FinancialAgent : MonoBehaviour
     public void Sell() {
         var rocket = GetRocket();
         if (rocket.CanSell(1)) {
-            cash += rocket.Sell(1);
+            lastSold = rocket.Sell(1);
+            cash += lastSold;
             graph?.MakePurchase(false);
         }
     }
