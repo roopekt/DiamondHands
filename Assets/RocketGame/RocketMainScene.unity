@@ -895,9 +895,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1862731545}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Buy
+      objectReference: {fileID: 0}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: FinancialAgent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 645311252249496221, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -919,9 +947,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 811237325}
     - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1862731545}
+    - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Hype
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: FinancialAgent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4793729827855638831, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: rocket
       value: 
