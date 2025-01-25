@@ -11,7 +11,7 @@ public class RocketFollower : MonoBehaviour
         if (rocketParent.isActive)
 
         transform.rotation =
-            Quaternion.FromToRotation(Vector3.up, new Vector3(rocketParent.constantXSpeed, rocketParent.GetVelY(), 0))
+            Quaternion.FromToRotation(Vector3.up, new Vector3(rocketParent.constantXSpeed, rocketParent.GetVelocity(), 0))
             * Quaternion.AngleAxis(-90f, Vector3.right);
         
     }

@@ -237,7 +237,7 @@ MonoBehaviour:
   graph: {fileID: 6491510948759547947}
   lastSold: 0
   lastBought: 0
-  insightPower: 0.25
+  insightPower: 0.75
   insightDuration: 7
   insightCooldown: 50
 --- !u!114 &6491510948759547947
@@ -346,7 +346,8 @@ PrefabInstance:
       value: Rocket1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7485103173754543202, guid: cbb9b376b41c8b21ab373749d518d6f7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbb9b376b41c8b21ab373749d518d6f7, type: 3}

@@ -38,7 +38,7 @@ public class RocketAudioController : MonoBehaviour
     }
 
     void UpdateThrusterAudio() {
-        var velocity = rocket.GetVelY();
+        var velocity = rocket.GetVelocity();
 
         var newState = ThrusterState.Off;
         if (velocity > 0f) newState = ThrusterState.Sputtering;
@@ -68,7 +68,7 @@ public class RocketAudioController : MonoBehaviour
     }
 
     void UpdateAlarm() {
-        float timeToCrashEstimate = -rocket.shareValue / rocket.GetVelY();
+        float timeToCrashEstimate = -rocket.shareValue / rocket.GetVelocity();
         bool alarmShouldBeOn = isAlive && 0f < timeToCrashEstimate && timeToCrashEstimate < alarmTime;
 
         if (alarmShouldBeOn != alarmOn) {

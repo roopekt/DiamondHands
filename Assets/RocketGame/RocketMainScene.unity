@@ -634,10 +634,6 @@ PrefabInstance:
       propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
-    - target: {fileID: 1957837588004729285, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: rocket
-      value: 
-      objectReference: {fileID: 811237325}
     - target: {fileID: 2509017302020824515, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: agentToTrack
       value: 
@@ -648,10 +644,6 @@ PrefabInstance:
       objectReference: {fileID: 811237325}
     - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1862731545}
-    - target: {fileID: 3734764584132759089, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
     - target: {fileID: 4793729827855638831, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
@@ -750,10 +742,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6574277679505733598, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
-      propertyPath: rocket
-      value: 
-      objectReference: {fileID: 811237325}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
