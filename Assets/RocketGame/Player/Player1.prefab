@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1458430496291908263}
   - component: {fileID: 3664668239816971531}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: VisualRocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
