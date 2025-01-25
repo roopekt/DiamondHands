@@ -153,5 +153,7 @@ MonoBehaviour:
   targets:
   - transform: {fileID: 0}
     padding: 3
+  - transform: {fileID: 0}
+    padding: 3
   camera: {fileID: 8966564236797499594}
   MinSize: 5

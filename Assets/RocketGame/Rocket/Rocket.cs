@@ -11,12 +11,13 @@ public class Rocket : MonoBehaviour
     public float saleVelocityGain = 1f;
     public float randomVelocityGain = .5f;
     public float constantXSpeed = 1f;
+    public float hypeCost = 1f;
     public TextMeshProUGUI heightText;
 
     private float velocity = 0f;
     float randomVelocity = 0;
     float lastRandomVelocityTime = 3;
-    private bool isActive = false;
+    public bool isActive = false;
     private Vector3 initialPosition;
 
     void Start() {
@@ -30,6 +31,7 @@ public class Rocket : MonoBehaviour
         {
             heightText.text = shareValue.ToString("F2") + " €";
         }
+        hypeCost = GetHypeCost();
         if (!isActive) return;
 
         velocity -= gravity * Time.deltaTime;
@@ -38,7 +40,7 @@ public class Rocket : MonoBehaviour
             randomVelocity = transform.position.y < 10 ? 0 : Random.Range(-1, 1) * (velocity * randomVelocityGain);
             lastRandomVelocityTime = Time.time + 3 *  Random.value;
         }
-        shareValue += (velocity + randomVelocity ) * Time.deltaTime;
+        shareValue += GetVelY() * Time.deltaTime;
         if (shareValue < 0f) {
             Destroy(gameObject);
             return;
@@ -46,6 +48,10 @@ public class Rocket : MonoBehaviour
         initialPosition += Vector3.right * constantXSpeed * Time.deltaTime ;
         transform.position = initialPosition + Vector3.up * shareValue ;
 
+    }
+    public float GetVelY()
+    {
+        return (velocity + randomVelocity);
     }
 
     public float GetBuyPrice() {
@@ -76,7 +82,7 @@ public class Rocket : MonoBehaviour
     }
     public float GetHypeCost()
     {
-        return !isActive ? 0 : shareValue * 2;
+        return !isActive ? 0 : (.5f + shareValue / 2);
     }
 
     public bool CanHype(float cash) {

@@ -1,16 +1,14 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RocketFollower : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Rocket rocketParent;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.position = rocketParent.transform.position;
+        if (rocketParent.isActive)
+        transform.up = new Vector3(rocketParent.constantXSpeed, rocketParent.GetVelY(), 0);
     }
 }
