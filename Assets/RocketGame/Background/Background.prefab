@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3017290245338685604}
   - component: {fileID: 264687695808204710}
+  - component: {fileID: 5242843907934445253}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -46,3 +47,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 3553564408436396616, guid: e1492124bcf66a0f3bd567afa21ddd42, type: 3}
   offset: {x: 0, y: 0}
+  horizontalOnly: 0
+  tileCountLimit: 10000
+--- !u!114 &5242843907934445253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684507625554139005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a29a9ec2b2ba22ca827646541ec878a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab: {fileID: 7221494850816677804, guid: 0b879ab09f9eda95f8619894be281704, type: 3}
+  offset: {x: 0, y: 15}
+  horizontalOnly: 1
+  tileCountLimit: 10000

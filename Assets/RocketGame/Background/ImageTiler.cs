@@ -5,6 +5,8 @@ public class ImageTiler : MonoBehaviour
 {
     public GameObject tilePrefab;
     public Vector2 offset = Vector2.zero;
+    public bool horizontalOnly = false;
+    public int tileCountLimit = 10_000;
 
     private Vector2 tileSize;
     private Camera camera;
@@ -29,6 +31,8 @@ public class ImageTiler : MonoBehaviour
         var coordinateSet = new HashSet<Vector2Int>();
         for (int x = cameraMinCorner.x; x <= cameraMaxCorner.x; x++) {
             for (int y = cameraMinCorner.y; y <= cameraMaxCorner.y; y++) {
+                if (horizontalOnly && y != 0) continue;
+
                 var coordinate = new Vector2Int(x, y);
                 coordinateSet.Add(coordinate);
 
@@ -47,6 +51,8 @@ public class ImageTiler : MonoBehaviour
     }
 
     void AddTile(Vector2Int position) {
+        if (tiles.Count >= tileCountLimit) return;
+        
         var tile = Instantiate(tilePrefab, GetWorldPosition(position), Quaternion.identity, transform);
         tiles.Add(position, tile);
     }
