@@ -794,11 +794,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2069932813 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2548340723879022066, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-  m_PrefabInstance: {fileID: 9067366614725243793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133052376
 GameObject:
   m_ObjectHideFlags: 1
@@ -1370,10 +1365,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 833281646808398140, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4931122393549862171, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -1399,46 +1390,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 173068771}
     - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: VisualRocket
-      value: 
-      objectReference: {fileID: 2069932813}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: RestartButton
       value: 
       objectReference: {fileID: 82531608}
     - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: VelocityRNGMax
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: VelocityRNGMin
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: hypeVelocityGain
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: saleVelocityGain
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: randomEventChance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: randomVelocityGain
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: randomEventDuration
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
-      propertyPath: randomEventInterfal
-      value: 10
+      propertyPath: VelocityRNGMin
+      value: -0.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2887423443545312323, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
