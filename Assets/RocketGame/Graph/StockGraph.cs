@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StockGraph : MonoBehaviour
 {
-    public GameObject target;
+    public Rocket target;
     public float drawInterval = 1f;
     public int totalLines = 10;
 
@@ -20,10 +20,6 @@ public class StockGraph : MonoBehaviour
     public Camera camera;
     public float lineWidth = 3;
 
-    private void Start()
-    {
-        BeginDrawingLine();
-    }
     public void MakePurchase(bool buy)
     {
         if (buy)

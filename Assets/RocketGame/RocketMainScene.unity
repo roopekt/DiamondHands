@@ -1167,6 +1167,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1862731545}
+    - target: {fileID: 1140639124070594581, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140639124070594581, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140639124070594581, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140639124070594581, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 900
+      objectReference: {fileID: 0}
     - target: {fileID: 1250720121338536994, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: agentToTrack
       value: 
@@ -1541,6 +1557,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 937875862}
+    - target: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: totalLines
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7860823441991322193, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: transactionShareCountSilder
       value: 

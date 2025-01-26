@@ -195,9 +195,10 @@ public class Rocket : MonoBehaviour
         shareValue += velocity * Time.deltaTime;
         if (shareValue < 0f) {
             isAlive = false;
+            Player.graph.StopDrawingLine();
 
             VisualRocket.renderer.enabled = false;
-            VisualRocket.explosion.gameObject.SetActive(true);
+            VisualRocket.explosion?.gameObject.SetActive(true);
             RestartButton.gameObject.SetActive(true);
             return;
         }
@@ -211,6 +212,7 @@ public class Rocket : MonoBehaviour
         AdjustVelocity();
         isActive = true;
         FireEvent(StockEvent.rise, 1);
+        Player.graph.BeginDrawingLine();
     }
 
     public float GetBuyPrice()
