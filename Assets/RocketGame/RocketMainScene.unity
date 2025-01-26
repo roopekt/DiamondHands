@@ -788,7 +788,7 @@ Transform:
   m_GameObject: {fileID: 1898309337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -12, z: 0}
+  m_LocalPosition: {x: 0, y: -8, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1081,11 +1081,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 116896659937609371, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.0000104904175
       objectReference: {fileID: 0}
     - target: {fileID: 116896659937609371, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0009888131
+      value: -0.00021244804
       objectReference: {fileID: 0}
     - target: {fileID: 169443471230626017, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1137,6 +1137,10 @@ PrefabInstance:
       objectReference: {fileID: 811237325}
     - target: {fileID: 3728069709190262961, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1862731545}
+    - target: {fileID: 4397958014333864298, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
     - target: {fileID: 4793729827855638831, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
