@@ -248,6 +248,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82531608 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+  m_PrefabInstance: {fileID: 8406762289463961410}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &173068771 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5614235680657206596, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+  m_PrefabInstance: {fileID: 8406762289463961410}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &333435665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 739403874468022743, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
@@ -353,6 +375,17 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 6503459769403567891, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
   m_PrefabInstance: {fileID: 1985978025513189712}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1204861809 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9036187399629987865, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+  m_PrefabInstance: {fileID: 8406762289463961410}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1341449715 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7860325986771042736, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
@@ -598,6 +631,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1824513913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2548340723879022066, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+  m_PrefabInstance: {fileID: 9067366614725243793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1838696111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1089,34 @@ PrefabInstance:
       propertyPath: m_text
       value: Buy Hype (D)
       objectReference: {fileID: 0}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 811237325}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Rocket, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 565149045492259562, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 645311252249496221, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1317,6 +1383,26 @@ PrefabInstance:
       propertyPath: transactionShareCountSilder
       value: 
       objectReference: {fileID: 1341449715}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1862731545}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: TweetText
+      value: 
+      objectReference: {fileID: 1204861809}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: TweetHandle
+      value: 
+      objectReference: {fileID: 173068771}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: VisualRocket
+      value: 
+      objectReference: {fileID: 1824513913}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: RestartButton
+      value: 
+      objectReference: {fileID: 82531608}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
