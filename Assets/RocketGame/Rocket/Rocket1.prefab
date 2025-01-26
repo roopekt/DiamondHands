@@ -339,7 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shareValue: 1
   sharesOwned: 0
-  hypeVelocityGain: 2
+  hypeVelocityGain: 8
   saleVelocityGain: 0.333
   randomVelocityGain: 1.25
   hypeCost: 1
