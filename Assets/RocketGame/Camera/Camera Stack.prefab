@@ -314,10 +314,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - transform: {fileID: 0}
-    padding: 3
-  - transform: {fileID: 0}
     padding: 14
+  - transform: {fileID: 0}
+    padding: 3
   cameras:
   - {fileID: 242228743046022117}
   - {fileID: 6503459769403567891}
   MinSize: 5
+  MaxSize: 120
