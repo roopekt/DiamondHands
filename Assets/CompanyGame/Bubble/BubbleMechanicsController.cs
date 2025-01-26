@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using UnityEngine.Assertions;
 using UnityEngine;
 
 public class BubbleMechanicsController : MonoBehaviour
@@ -11,7 +11,7 @@ public class BubbleMechanicsController : MonoBehaviour
 
     void Start() {
         pelletContainer = GameObject.Find("/PelletContainer");
-        Assert.NotNull(pelletContainer);
+        Assert.IsNotNull(pelletContainer);
     }
 
     void FixedUpdate() {
