@@ -131,7 +131,9 @@ public class FinancialAgent : MonoBehaviour
         insightDuration = initinsightDuration;
         insightCooldown = initinsightCooldown;
         lastInsightUse = initlastInsightUse;
-        
+
+        graph.ClearLine();
+
         cash = initCash;
     }
 }

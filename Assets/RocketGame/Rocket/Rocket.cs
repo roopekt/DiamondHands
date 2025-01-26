@@ -200,7 +200,7 @@ public class Rocket : MonoBehaviour
             Player.graph.StopDrawingLine();
 
             VisualRocket.renderer.enabled = false;
-            VisualRocket.explosion?.gameObject.SetActive(true);
+            VisualRocket.explosion?.Play(true);
             RestartButton.gameObject.SetActive(true);
             return;
         }

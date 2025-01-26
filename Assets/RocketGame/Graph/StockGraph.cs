@@ -46,6 +46,21 @@ public class StockGraph : MonoBehaviour
         {
             StopCoroutine(lineCoroutine);
         }
+        lineCoroutine = null;
+    }
+    public void ClearLine()
+    {
+        StopDrawingLine();
+        linePoints.Clear();
+        while (lineSegments.Count > 0)
+        {
+            pool.DeactivateObject(lineSegments[0].gameObject);
+            lineSegments.RemoveAt(0);
+        }
+        foreach (Transform child in pool.activeObjs)
+        {
+            pool.DeactivateObject(child.gameObject);    
+        }
     }
     void DrawLineBetweenPoints(Vector3 start, Vector3 end)
     {
