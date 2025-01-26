@@ -20,6 +20,11 @@ public class StockGraph : MonoBehaviour
     public Camera camera;
     public float lineWidth = 3;
 
+    private void Start()
+    {
+        BeginDrawingLine();
+    }
+
     public void MakePurchase(bool buy)
     {
         if (buy)
