@@ -145,6 +145,8 @@ public class Rocket : MonoBehaviour
             if (influence > 10)
                 influence *= .5f;
             influence -= Random.value * 3;
+            nextRandomEvent = Time.time + randomEventInterfal;
+            randomEventDuraiton = Time.time + randomEventInterfal;
         }
     }
     public enum StockEvent
