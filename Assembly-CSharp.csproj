@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/RocketGame/Background/ImageTiler.cs" />
-    <Compile Include="Assets/RocketGame/CameraController.cs" />
     <Compile Include="Assets/Utils/EntityManager.cs" />
     <Compile Include="Assets/RocketGame/UI/BuyPriceDisplayer.cs" />
     <Compile Include="Assets/RocketGame/Rocket/Rocket.cs" />
@@ -79,6 +78,7 @@
     <Compile Include="Assets/RocketGame/UI/HypePriceDisplayer.cs" />
     <Compile Include="Assets/Fish/FishCon.cs" />
     <Compile Include="Assets/RocketGame/Player/FinancialAgent.cs" />
+    <Compile Include="Assets/RocketGame/Camera/CameraController.cs" />
     <Compile Include="Assets/CompanyGame/Pellet/Pellet.cs" />
     <Compile Include="Assets/RocketGame/Rocket/RocketFollower.cs" />
     <Compile Include="Assets/RocketGame/UI/SellPriceDisplayer.cs" />

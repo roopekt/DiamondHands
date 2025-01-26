@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!20 &42806066 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8966564236797499594, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
-  m_PrefabInstance: {fileID: 1985978025513189712}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &71982135
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +348,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4acfa4c26372f147a961a49ecf8a4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!20 &937875862 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6503459769403567891, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
+  m_PrefabInstance: {fileID: 1985978025513189712}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1341449715 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7860325986771042736, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
@@ -947,14 +947,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
-      propertyPath: targets.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
-      propertyPath: targets.Array.data[1].padding
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
       propertyPath: targets.Array.data[0].transform
       value: 
       objectReference: {fileID: 1898309339}
@@ -1320,7 +1312,7 @@ PrefabInstance:
     - target: {fileID: 6491510948759547947, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: camera
       value: 
-      objectReference: {fileID: 42806066}
+      objectReference: {fileID: 937875862}
     - target: {fileID: 7860823441991322193, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: transactionShareCountSilder
       value: 

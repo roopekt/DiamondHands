@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     }
 
     public List<FollowableObject> targets;
-    public Camera camera;
+    public List<Camera> cameras;
     public float MinSize = 5f;
 
     private class AABB {
@@ -58,14 +58,18 @@ public class CameraController : MonoBehaviour
     {
         var aabb = CombineAABBs(targets.Select(target => AABB.NewAroundPoint(target.transform.position, target.padding)));
 
-        var aspectRatio = camera.aspect;//width / height
+        var aspectRatio = cameras[0].aspect;//width / height
         var sizeRequiredForHeightMatch = aabb.GetSize().y * 0.5f;
         var sizeRequiredForWidthMatch = aabb.GetSize().x / aspectRatio * 0.5f;
         var requiredCameraSize = Mathf.Max(sizeRequiredForHeightMatch, sizeRequiredForWidthMatch);
 
-        camera.orthographicSize = Mathf.Max(MinSize, requiredCameraSize);
+        var cameraSize = Mathf.Max(MinSize, requiredCameraSize);
         var cameraPosition = (Vector3)aabb.GetCenter();
         cameraPosition.z = -10;
-        camera.transform.position = cameraPosition;
+
+        foreach (var camera in cameras) {
+            camera.orthographicSize = cameraSize;
+            camera.transform.position = cameraPosition;
+        }
     }
 }
