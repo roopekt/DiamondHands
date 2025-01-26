@@ -133,6 +133,7 @@ public class FinancialAgent : MonoBehaviour
         lastInsightUse = initlastInsightUse;
 
         graph.ClearLine();
+        graph.BeginDrawingLine();
 
         cash = initCash;
     }
