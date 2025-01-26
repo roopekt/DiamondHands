@@ -794,6 +794,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2069932813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2548340723879022066, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+  m_PrefabInstance: {fileID: 9067366614725243793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133052376
 GameObject:
   m_ObjectHideFlags: 1
@@ -1573,6 +1578,10 @@ PrefabInstance:
       propertyPath: TweetHandle
       value: 
       objectReference: {fileID: 173068771}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: VisualRocket
+      value: 
+      objectReference: {fileID: 2069932813}
     - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
       propertyPath: RestartButton
       value: 
