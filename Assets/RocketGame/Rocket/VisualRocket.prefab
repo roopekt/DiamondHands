@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketParent: {fileID: 0}
-  renderer: {fileID: 0}
+  renderer: {fileID: 1564129727589913495}
   explosion: {fileID: 0}
 --- !u!23 &1564129727589913495
 MeshRenderer:
@@ -151,6 +151,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8620588918006998813, guid: 2263b5c8e0c7def4d8936124445051da, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620588918006998813, guid: 2263b5c8e0c7def4d8936124445051da, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.58431375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620588918006998813, guid: 2263b5c8e0c7def4d8936124445051da, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.94716984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620588918006998813, guid: 2263b5c8e0c7def4d8936124445051da, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.8793577
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620588918006998813, guid: 2263b5c8e0c7def4d8936124445051da, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.5254112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620588918006998814, guid: 2263b5c8e0c7def4d8936124445051da, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 92dff7a1987fbde498dcb57a8282c7b5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
