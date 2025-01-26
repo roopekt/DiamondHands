@@ -1073,6 +1073,10 @@ PrefabInstance:
       propertyPath: agentToTrack
       value: 
       objectReference: {fileID: 1862731545}
+    - target: {fileID: 1761323897362827109, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2509017302020824515, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: agentToTrack
       value: 

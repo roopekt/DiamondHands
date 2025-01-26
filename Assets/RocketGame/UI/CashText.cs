@@ -8,6 +8,6 @@ public class CashText : MonoBehaviour
 
     void Update()
     {
-        text.text = agentToTrack.cash.ToString() + " €";
+        text.text = agentToTrack.cash.ToString("F2") + " €";
     }
 }
