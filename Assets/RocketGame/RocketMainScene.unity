@@ -1459,6 +1459,38 @@ PrefabInstance:
       propertyPath: RestartButton
       value: 
       objectReference: {fileID: 82531608}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: VelocityRNGMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: VelocityRNGMin
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: hypeVelocityGain
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: saleVelocityGain
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: randomEventChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: randomVelocityGain
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: randomEventDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618751745527495133, guid: a2e55c57fcd4577898fb61db784c93b3, type: 3}
+      propertyPath: randomEventInterfal
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

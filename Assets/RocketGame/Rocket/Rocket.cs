@@ -31,6 +31,9 @@ public class Rocket : MonoBehaviour
     public Button RestartButton;
     public FinancialAgent Player;
     public GameObject VisualRocket;
+
+    public float VelocityRNGMin;
+    public float VelocityRNGMax;
     
     public float GetVelocity() {
         return velocity;
@@ -44,11 +47,20 @@ public class Rocket : MonoBehaviour
         }
         else
         {
+            float direction = Random.Range(-5f, InfluenceVel());
+            if (playerBoostDuration > Time.time)
+            {
+                direction = Random.Range(-5f, InfluenceVel()+hypeVelocityGain);
+            }
             float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? playerBoostInfluence : 0);
-            velocity = (Random.Range(-2f, 1f) + adjust) * InfluenceVel();
+            velocity = (Random.Range(VelocityRNGMin, VelocityRNGMax)) * randomVelocityGain * Math.Sign(direction);// * ((influence/10f)+0.1f);
         if (HasRandomEvent(StockEvent.chaos))
             velocity *= Random.value * 2;
         }
+        
+        Debug.Log("Velocity: " + velocity);
+        Debug.Log("Influence: " + influence);
+        influence -= 0.1f;// * Time.deltaTime;
 
         bool tweetCurrent;
         if (Math.Sign(velocity) >= 0) tweetCurrent = true;
@@ -95,7 +107,8 @@ public class Rocket : MonoBehaviour
 
     float InfluenceVel()
     {
-        float final = .5f * Mathf.Sign(influence) + influence;
+        //float final = .5f * Mathf.Sign(influence) + influence;
+        float final = influence;
         return final ;
     }
 
@@ -220,8 +233,8 @@ public class Rocket : MonoBehaviour
 
     public float Buy(int shareCount) {
         sharesOwned += shareCount;
-        influence += saleVelocityGain * 2 * Random.value ;
-        influence = Mathf.Clamp(influence, -10, 10);
+        influence += saleVelocityGain; //* 2 * Random.value ;
+        influence = Mathf.Clamp(influence, -4, 100);
         return shareValue * shareCount;
     }
 
@@ -232,8 +245,8 @@ public class Rocket : MonoBehaviour
 
     public float Sell(int shareCount) {
         sharesOwned -= shareCount;
-        influence -= saleVelocityGain * (1+ Random.value);
-        influence = Mathf.Clamp(influence, -10, 10);
+        influence -= saleVelocityGain * 2;// * (1+ Random.value);
+        influence = Mathf.Clamp(influence, -4, 100);
         return GetSellPrice() * shareCount;
     }
     public float GetHypeCost()
