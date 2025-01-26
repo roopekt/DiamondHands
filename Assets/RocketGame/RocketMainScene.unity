@@ -1109,6 +1109,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3947075553974207463, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4793729827855638831, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: rocket
       value: 
@@ -1116,6 +1120,10 @@ PrefabInstance:
     - target: {fileID: 5074348380059164999, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795597460829755705, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5852608557522447679, guid: a823de989da8b171e86ec50d1e48be70, type: 3}
       propertyPath: rocket
