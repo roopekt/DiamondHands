@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
     public List<FollowableObject> targets;
     public List<Camera> cameras;
     public float MinSize = 5f;
+    public float MaxSize = 80f;
 
     private class AABB {
         public Vector2 min;
@@ -36,16 +37,35 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    private static AABB CombineAABBs(IEnumerable<AABB> AABBs) {
+    private static AABB CombineAABBs(IEnumerable<AABB> AABBs, float maxHeight) {
         var minX = float.PositiveInfinity;
         var minY = float.PositiveInfinity;
         var maxX = float.NegativeInfinity;
         var maxY = float.NegativeInfinity;
+        bool isFirstIteration = true;
         foreach (var aabb in AABBs) {
-            minX = Mathf.Min(minX, aabb.min.x);
-            minY = Mathf.Min(minY, aabb.min.y);
-            maxX = Mathf.Max(maxX, aabb.max.x);
-            maxY = Mathf.Max(maxY, aabb.max.y);
+            float newMinX = Mathf.Min(minX, aabb.min.x);
+            float newMinY = Mathf.Min(minY, aabb.min.y);
+            float newMaxX = Mathf.Max(maxX, aabb.max.x);
+            float newMaxY = Mathf.Max(maxY, aabb.max.y);
+
+            if (!isFirstIteration) {
+                float height = maxY - minY;
+                float newHeight = newMaxY - newMinY;
+                float t = Mathf.InverseLerp(height, newHeight, maxHeight);//if maxHeight is beyond the range, t=1
+
+                newMinX = Mathf.Lerp(minX, newMinX, t);
+                newMinY = Mathf.Lerp(minY, newMinY, t);
+                newMaxX = Mathf.Lerp(maxX, newMaxX, t);
+                newMaxY = Mathf.Lerp(maxY, newMaxY, t);
+            }
+
+            minX = newMinX;
+            minY = newMinY;
+            maxX = newMaxX;
+            maxY = newMaxY;
+
+            isFirstIteration = false;
         }
 
         return new AABB {
@@ -56,7 +76,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        var aabb = CombineAABBs(targets.Select(target => AABB.NewAroundPoint(target.transform.position, target.padding)));
+        var aabb = CombineAABBs(targets.Select(target => AABB.NewAroundPoint(target.transform.position, target.padding)), MaxSize);
 
         var aspectRatio = cameras[0].aspect;//width / height
         var sizeRequiredForHeightMatch = aabb.GetSize().y * 0.5f;

@@ -893,11 +893,11 @@ PrefabInstance:
     - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
       propertyPath: targets.Array.data[0].transform
       value: 
-      objectReference: {fileID: 1898309339}
+      objectReference: {fileID: 333435665}
     - target: {fileID: 6567036931920524845, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
       propertyPath: targets.Array.data[1].transform
       value: 
-      objectReference: {fileID: 333435665}
+      objectReference: {fileID: 1898309339}
     - target: {fileID: 6797263616967737612, guid: 86ed1180d85d45e4395ece38a907dc48, type: 3}
       propertyPath: m_Name
       value: Main Camera
