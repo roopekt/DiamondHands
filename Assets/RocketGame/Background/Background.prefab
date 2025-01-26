@@ -62,6 +62,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 7221494850816677804, guid: 0b879ab09f9eda95f8619894be281704, type: 3}
-  offset: {x: 0, y: 15}
+  offset: {x: 0, y: 11}
   horizontalOnly: 1
   tileCountLimit: 10000
