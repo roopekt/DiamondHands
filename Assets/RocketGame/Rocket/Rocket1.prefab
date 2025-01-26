@@ -147,7 +147,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.41
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shareValue: 1
   sharesOwned: 0
-  hypeVelocityGain: 2
+  hypeVelocityGain: 8
   saleVelocityGain: 0.333
   randomVelocityGain: 1.25
   hypeCost: 1
@@ -402,7 +402,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -499,7 +499,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: a1d9ec4000a5278c8b96030f977e8d10, type: 3}
   m_Resource: {fileID: 8300000, guid: a1d9ec4000a5278c8b96030f977e8d10, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.647
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -596,7 +596,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 2fd346a0ed44df866b2abcfe849d90ad, type: 3}
   m_Resource: {fileID: 8300000, guid: 2fd346a0ed44df866b2abcfe849d90ad, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.224
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -701,6 +701,7 @@ MonoBehaviour:
   deathAudioSource: {fileID: 1832683493747690753}
   alarmAudioSource: {fileID: 7773231182309299729}
   alarmTime: 1.5
+  VolumeAdjust: 0.5
 --- !u!1 &8638647821342137549
 GameObject:
   m_ObjectHideFlags: 0
