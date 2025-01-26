@@ -30,7 +30,7 @@ public class Rocket : MonoBehaviour
     private float lastTweetedTime;
     public Button RestartButton;
     public FinancialAgent Player;
-    public GameObject VisualRocket;
+    public RocketFollower VisualRocket;
 
     public float VelocityRNGMin;
     public float VelocityRNGMax;
