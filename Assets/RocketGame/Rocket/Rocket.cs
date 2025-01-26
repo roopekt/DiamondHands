@@ -32,8 +32,8 @@ public class Rocket : MonoBehaviour
     public FinancialAgent Player;
     public RocketFollower VisualRocket;
 
-    public float VelocityRNGMin;
-    public float VelocityRNGMax;
+    public float VelocityRNGMin = -.75f;
+    public float VelocityRNGMax = 1;
     
     public float GetVelocity() {
         return velocity;

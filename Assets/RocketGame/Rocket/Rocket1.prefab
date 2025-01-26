@@ -383,6 +383,8 @@ MonoBehaviour:
   RestartButton: {fileID: 0}
   Player: {fileID: 0}
   VisualRocket: {fileID: 0}
+  VelocityRNGMin: -0.75
+  VelocityRNGMax: 1
   constantXSpeed: 1
   randomEventChance: 0.333
   randomEventInterfal: 1
