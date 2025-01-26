@@ -1,9 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Rocket : MonoBehaviour
 {
-    public float shareValue = 1f;
+    public float shareValue = 1f; //TODO: if changing in editor, fix reseting to reflect new value
     public int sharesOwned = 0;
     public float hypeVelocityGain = 1f;
     public float saleVelocityGain = 1f;
@@ -13,6 +18,17 @@ public class Rocket : MonoBehaviour
 
     public  float velocity = 0f;
 
+    public List<string> HypeTweets;
+    public List<string> HateTweets;
+    public TextMeshProUGUI TweetText;
+    public TextMeshProUGUI TweetHandle;
+    private bool lastTweet = false;
+    public float TweetDuration = 3f;
+    private float lastTweetedTime;
+    public Button RestartButton;
+    public FinancialAgent Player;
+    public GameObject VisualRocket;
+    
     public float GetVelocity() {
         return velocity;
     }
@@ -26,11 +42,38 @@ public class Rocket : MonoBehaviour
         else
         {
             float adjust = (HasRandomEvent(StockEvent.rise) ? .75f : 0) + ((playerBoostDuration > Time.time) ? playerBoostInfluence : 0);
-            velocity = (Random.Range(-8f, 1f) + adjust) * InfluenceVel();
+            velocity = (Random.Range(-2f, 1f) + adjust) * InfluenceVel();
         if (HasRandomEvent(StockEvent.chaos))
             velocity *= Random.value * 2;
         }
+
+        bool tweetCurrent;
+        if (Math.Sign(velocity) >= 0) tweetCurrent = true;
+        else tweetCurrent = false;
+        if (tweetCurrent != lastTweet || Time.time > lastTweetedTime + TweetDuration)
+        {
+            lastTweet = tweetCurrent;
+            lastTweetedTime = Time.time;
+            Tweet(tweetCurrent);
+        }
     }
+
+    private void Tweet(bool hype)
+    {
+        if (hype)
+        {
+            int rng = Random.Range(0, HypeTweets.Count);
+            TweetHandle.text = HypeTweets[rng].Split(":")[0];
+            TweetText.text = HypeTweets[rng].Split(":")[1];
+        }
+        else
+        {
+            int rng = Random.Range(0, HateTweets.Count);
+            TweetHandle.text = HateTweets[rng].Split(":")[0];
+            TweetText.text = HateTweets[rng].Split(":")[1];
+        }
+    }
+
     float InfluenceVel()
     {
         float final = .5f * Mathf.Sign(influence) + influence;
@@ -68,7 +111,7 @@ public class Rocket : MonoBehaviour
     }
     void FireEvent(StockEvent evtT, float evtDur)
     {
-        Debug.Log($"Fire randon event {evtT} for duration {evtDur}");
+        Debug.Log($"Fire random event {evtT} for duration {evtDur}");
         randomEvent = evtT;
         randomEventDuraiton = Time.time + evtDur;
         nextRandomEvent = Time.time + evtDur + randomEventInterfal;
@@ -99,9 +142,11 @@ public class Rocket : MonoBehaviour
     public bool isActive = false;
     public bool isAlive = true;
     private Vector3 initialPosition;
+    private Vector3 resetPosition;
 
     void Start() {
         initialPosition = transform.position;
+        resetPosition = initialPosition;
         transform.position = initialPosition + Vector3.up * shareValue;
     }
 
@@ -125,6 +170,7 @@ public class Rocket : MonoBehaviour
         shareValue += velocity * Time.deltaTime;
         if (shareValue < 0f) {
             isAlive = false;
+            RestartButton.gameObject.SetActive(true);
             return;
         }
         initialPosition += Vector3.right * constantXSpeed * Time.deltaTime ;
@@ -189,5 +235,18 @@ public class Rocket : MonoBehaviour
 
         Launch();
         return cost;
+    }
+
+    public void Restart()
+    {
+        RestartButton.gameObject.SetActive(false);
+        isActive = false;
+        isAlive = true;
+        transform.position = resetPosition;
+        Player.Reset();
+        shareValue = 1;
+        sharesOwned = 0;
+        VisualRocket.transform.rotation = Quaternion.Euler(-90, 0, 0);
+        Start();
     }
 }
