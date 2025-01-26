@@ -30,7 +30,7 @@ public class Rocket : MonoBehaviour
     private float lastTweetedTime;
     public Button RestartButton;
     public FinancialAgent Player;
-    public GameObject VisualRocket;
+    public RocketFollower VisualRocket;
     
     public float GetVelocity() {
         return velocity;
@@ -53,6 +53,8 @@ public class Rocket : MonoBehaviour
         if (HasRandomEvent(StockEvent.chaos))
             velocity *= Random.value * 2;
         }
+        velocity = Mathf.Clamp(velocity, -15, 15);
+
 
         bool tweetCurrent;
         if (Math.Sign(velocity) >= 0) tweetCurrent = true;
@@ -193,6 +195,9 @@ public class Rocket : MonoBehaviour
         shareValue += velocity * Time.deltaTime;
         if (shareValue < 0f) {
             isAlive = false;
+
+            VisualRocket.renderer.enabled = false;
+            VisualRocket.explosion.gameObject.SetActive(true);
             RestartButton.gameObject.SetActive(true);
             return;
         }
@@ -225,7 +230,6 @@ public class Rocket : MonoBehaviour
     public float Buy(int shareCount) {
         sharesOwned += shareCount;
         influence += saleVelocityGain * 2 * Random.value ;
-        influence = Mathf.Clamp(influence, -10, 10);
         return shareValue * shareCount;
     }
 
@@ -237,7 +241,6 @@ public class Rocket : MonoBehaviour
     public float Sell(int shareCount) {
         sharesOwned -= shareCount;
         influence -= saleVelocityGain * (1+ Random.value);
-        influence = Mathf.Clamp(influence, -10, 10);
         return GetSellPrice() * shareCount;
     }
     public float GetHypeCost()
@@ -269,6 +272,7 @@ public class Rocket : MonoBehaviour
         Player.Reset();
         shareValue = 1;
         sharesOwned = 0;
+        VisualRocket.renderer.enabled = true;
         VisualRocket.transform.rotation = Quaternion.Euler(-90, 0, 0);
         Start();
     }
