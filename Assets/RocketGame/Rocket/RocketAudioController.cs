@@ -11,6 +11,7 @@ public class RocketAudioController : MonoBehaviour
     public AudioSource deathAudioSource;
     public AudioSource alarmAudioSource;
     public float alarmTime = 1.5f;
+    public float VolumeAdjust = 0.2f;
 
 
     private ThrusterState thrusterState = ThrusterState.Off;
@@ -60,10 +61,10 @@ public class RocketAudioController : MonoBehaviour
         }
 
         if (thrusterState == ThrusterState.On) {
-            thrusterAudioSource.volume = Mathf.Clamp(velocity / velocityForMaxThrusterPower, 0f, 1f);
+            thrusterAudioSource.volume = Mathf.Clamp(VolumeAdjust * velocity / velocityForMaxThrusterPower, 0f, 1f);
         }
         else {
-            thrusterAudioSource.volume = 1f;
+            thrusterAudioSource.volume = VolumeAdjust;
         }
     }
 

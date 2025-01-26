@@ -20,8 +20,11 @@ public class Rocket : MonoBehaviour
 
     public List<string> HypeTweets;
     public List<string> HateTweets;
+    public List<AudioClip> HypeAudio;
+    public List<AudioClip> HateAudio;
     public TextMeshProUGUI TweetText;
     public TextMeshProUGUI TweetHandle;
+    public AudioSource TweetAudioSource;
     private bool lastTweet = false;
     public float TweetDuration = 3f;
     private float lastTweetedTime;
@@ -65,12 +68,27 @@ public class Rocket : MonoBehaviour
             int rng = Random.Range(0, HypeTweets.Count);
             TweetHandle.text = HypeTweets[rng].Split(":")[0];
             TweetText.text = HypeTweets[rng].Split(":")[1];
+            if (!TweetAudioSource.isPlaying)
+            {
+                int rng2 = Random.Range(0, HypeAudio.Count);
+                //TweetAudioSource.clip = HypeAudio[rng2];
+                TweetAudioSource.PlayOneShot(HypeAudio[rng2]);
+            }
+            
         }
         else
         {
             int rng = Random.Range(0, HateTweets.Count);
             TweetHandle.text = HateTweets[rng].Split(":")[0];
             TweetText.text = HateTweets[rng].Split(":")[1];
+            
+            if (!TweetAudioSource.isPlaying)
+            {
+                int rng2 = Random.Range(0, HateAudio.Count);
+                //TweetAudioSource.clip = HateAudio[rng2];
+                TweetAudioSource.PlayOneShot(HateAudio[rng2]);
+            }
+            
         }
     }
 
