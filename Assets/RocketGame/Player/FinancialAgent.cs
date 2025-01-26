@@ -16,8 +16,13 @@ public class FinancialAgent : MonoBehaviour
     public float insightPower = .5f;
     public float insightDuration = 3;
     public float insightCooldown = 30;
-    float lastInsightUse = 0;
+    public AudioSource buyAudioSource;
+    public AudioSource sellAudioSource;
+    public AudioSource hypeAudioSource;
+    public AudioSource insightAudioSource;
 
+
+    private float lastInsightUse = 0;
     private float initlastSold = 0;
     private float initlastBought = 0;
 
@@ -71,6 +76,7 @@ public class FinancialAgent : MonoBehaviour
     public void Buy(int amt = 1) {
         var rocket = GetRocket();
         if (rocket.CanBuy(amt, cash)) {
+            buyAudioSource.Play();
             lastBought = rocket.Buy(amt);
             cash -= lastBought;
             graph?.MakePurchase(true);
@@ -80,6 +86,7 @@ public class FinancialAgent : MonoBehaviour
     public void Sell(int amt = 1) {
         var rocket = GetRocket();
         if (rocket.CanSell(amt)) {
+            sellAudioSource.Play();
             lastSold = rocket.Sell(amt);
             cash += lastSold;
             graph?.MakePurchase(false);
@@ -89,12 +96,14 @@ public class FinancialAgent : MonoBehaviour
     public void Hype() {
         var rocket = GetRocket();
         if (rocket.CanHype(cash)) {
+            hypeAudioSource.Play();
             cash -= rocket.Hype();
         }
     }
 
     public void Insight() {
         if (CanInsight()) {
+            insightAudioSource.Play();
             StartCoroutine(InsightCoroutine());
             lastInsightUse = Time.time + insightDuration;
         }
