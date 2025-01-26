@@ -184,6 +184,10 @@ public class Rocket : MonoBehaviour
 
     void Update()
     {
+        if (VisualRocket.isActiveAndEnabled != isAlive) {
+            VisualRocket.gameObject.SetActive(isAlive);
+        }
+
         if (!isAlive) return;
 
         if (heightText != null)
@@ -204,7 +208,6 @@ public class Rocket : MonoBehaviour
             isAlive = false;
             Player.graph.StopDrawingLine();
 
-            VisualRocket.renderer.enabled = false;
             VisualRocket.explosion?.Play(true);
             RestartButton.gameObject.SetActive(true);
             return;
