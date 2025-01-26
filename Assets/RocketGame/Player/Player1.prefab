@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3664668239816971531}
   - component: {fileID: 8629073728530618338}
   - component: {fileID: 7558061350415504931}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VisualRocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
