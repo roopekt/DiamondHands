@@ -66,8 +66,9 @@ public class Rocket : MonoBehaviour
         if (hype)
         {
             int rng = Random.Range(0, HypeTweets.Count);
-            TweetHandle.text = HypeTweets[rng].Split(":")[0];
-            TweetText.text = HypeTweets[rng].Split(":")[1];
+            //TweetHandle.text = HypeTweets[rng].Split(":")[0];
+            //TweetText.text = HypeTweets[rng].Split(":")[1];
+            TweetText.text += "\n" + HypeTweets[rng];
             if (!TweetAudioSource.isPlaying)
             {
                 int rng2 = Random.Range(0, HypeAudio.Count);
@@ -79,9 +80,9 @@ public class Rocket : MonoBehaviour
         else
         {
             int rng = Random.Range(0, HateTweets.Count);
-            TweetHandle.text = HateTweets[rng].Split(":")[0];
-            TweetText.text = HateTweets[rng].Split(":")[1];
-            
+            //TweetHandle.text = HateTweets[rng].Split(":")[0];
+            //TweetText.text = HateTweets[rng].Split(":")[1];
+            TweetText.text += "\n" + HateTweets[rng];
             if (!TweetAudioSource.isPlaying)
             {
                 int rng2 = Random.Range(0, HateAudio.Count);
